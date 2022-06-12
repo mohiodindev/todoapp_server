@@ -61,7 +61,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.methods.getJwtToken = function () {
   return jwt.sign({ _id: this._id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000,
+    expiresIn: 10 * 24 * 60 * 60 * 1000,
   });
 };
 
