@@ -17,7 +17,7 @@ cloudinary.config({
 connectDatabase();
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcom to TodoApp server" });
+  res.send("<h1Todo App Server </h1>")
 });
 
 app.listen(process.env.PORT, () => {
